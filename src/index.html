@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Text File Editor</title>
+  <style>
+    body {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+      font-family: Arial, sans-serif;
+    }
+    .button-group {
+      margin: 10px 0;
+    }
+    button {
+      padding: 8px 16px;
+      margin-right: 10px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #e0e0e0;
+    }
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+    #saveBtn {
+      background-color: #4CAF50;
+      color: white;
+      border-color: #45a049;
+    }
+    #saveBtn:hover {
+      background-color: #45a049;
+    }
+    #saveAsBtn {
+      background-color: #2196F3;
+      color: white;
+      border-color: #1e88e5;
+    }
+    #saveAsBtn:hover {
+      background-color: #1e88e5;
+    }
+    textarea {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    #fileInfo {
+      margin: 15px 0;
+      padding: 12px;
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 4px;
+      font-family: 'Consolas', 'Monaco', monospace;
+      display: flex;
+      align-items: center;
+    }
+    #filePath {
+      word-break: break-all;
+      margin: 0;
+      flex-grow: 1;
+    }
+    .label {
+      font-weight: bold;
+      color: #495057;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+    .value {
+      color: #212529;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text File Editor</h1>
+  <div id="status"></div>
+  <div class="button-group">
+    <button id="openBtn">Open File</button>
+    <button id="saveBtn">Save</button>
+    <button id="saveAsBtn">Save As...</button>
+  </div>
+  <div id="fileInfo" style="display: none;">
+    <span class="label">File:</span>
+    <span id="filePath" class="value">No file opened</span>
+  </div>
+  <textarea id="textArea" rows="20"></textarea>
+  <script src="./app.js"></script>
+</body>
+</html> 
