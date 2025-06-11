@@ -39,4 +39,10 @@ It will generate `app.js` in the same folder, which you can use in HTML.
 
 ---
 
+```
+npm install --save-dev typescript @types/node
+npm install --save-dev serve
+npm run build
+npm start
+```
 
